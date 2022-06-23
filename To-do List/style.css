@@ -23,12 +23,13 @@ li {
   text-transform: uppercase;
 }
 
-.done {
-  text-decoration: line-through;
-}
 .checkbox-list {
   margin-right: 1rem;
 }
 .label-text {
   margin: 0 2rem;
+}
+.done {
+  color: red;
+  text-decoration: line-through;
 }

@@ -36,6 +36,7 @@ function deletePrep() {
 function listPrep() {
   var li = document.createElement("li");
   li.append(checkboxPrep(), labelPrep(), deletePrep());
+  li.addEventListener("click", addClass);
 
   list.appendChild(li);
 
@@ -54,18 +55,14 @@ function keyAddList(event) {
   }
 }
 function deleteItem(event) {
-  event.target.parentNode.remove();
+  var item = event.target;
+  item.parentNode.remove();
 }
 
 function doneItem(event) {
-  event.target.nextSibling.classList.toggle("done");
+  var item = event.target;
+  item.nextSibling.classList.toggle("done");
 }
 
 btn.addEventListener("click", btnAddList);
 input.addEventListener("keypress", keyAddList);
-
-// li.addEventListener("click", "input", ":checkbox", function () {
-//   // creates a boolean that toggles the done class on li:
-//   // if the list item is clicked this toggles the done class
-//   var finished = this.classList.toggle("done");
-// });
