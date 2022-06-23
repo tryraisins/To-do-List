@@ -36,7 +36,6 @@ function deletePrep() {
 function listPrep() {
   var li = document.createElement("li");
   li.append(checkboxPrep(), labelPrep(), deletePrep());
-  li.addEventListener("click", addClass);
 
   list.appendChild(li);
 
